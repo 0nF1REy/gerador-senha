@@ -1,0 +1,233 @@
+* {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #260ec8, #1d5eb9, #4d47ff, #eeb600);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 5px 5px;
+    animation: starryBackground 8s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.logo {
+    max-width: 600px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.15),
+        0px 5px 0px rgba(0, 0, 0, 0.15);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo:hover {
+    opacity: 0.5;
+    transform: scale(1.01);
+}
+
+.container-input {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span {
+    color: #fff;
+    font-size: 22px;
+    font-family: rubik-italic;
+}
+
+.slider {
+    width: 100%;
+    border-radius: 5px;
+    background: #dfdfdf;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.button-cta {
+    height: 40px;
+    background-color: #3eb72b;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: rubik;
+}
+
+.button-cta:hover {
+    background-color: #2a8d1f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.button-cta::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00000090;
+    transition: width 0.3s ease;
+}
+
+.button-cta:hover::before {
+    width: 100%;
+}
+
+.button-cta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(to right, #00000090, #3eb72b1a 50%, #3eb72b2a 100%);
+    transform: skewX(-45deg) translateX(0);
+    transition: transform 0.5s ease;
+}
+
+.button-cta:hover::after {
+    transform: skewX(-45deg) translateX(100%);
+}
+
+.container-password {
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-family: expletus-sans;
+}
+
+.password {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.40);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #313131;
+    transition: transform 0.5s;
+    font-family: familjen-grotesk-italic;
+}
+
+.password:hover {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    color: #fff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-family: familjen-grotesk;
+}
+
+.hide {
+    display: none;
+}
+
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 90%;
+    left: 0;
+    right: 0;
+    color: rgb(195, 205, 6);
+    text-align: center;
+    animation: slideInFromLeft 3s ease-out forwards;
+    font-family: gamelia;
+    font-size: 0.8em;
+    letter-spacing: 0.2rem;
+    text-shadow:
+        0px 0px 20px rgba(141, 141, 141, 0.8),
+        0px 30px 50px rgba(0, 0, 0, 0.97),
+        0px 5px 15px rgba(255, 255, 255, 0.098);
+}
+
+#icon {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 70%;
+    bottom: 8%;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.553);
+    color: rgb(195, 205, 6);
+    opacity: 0;
+    transform: translateX(100vw);
+    animation: slideInFromRight 3s ease-out forwards;
+    font-size: 30px;
+}

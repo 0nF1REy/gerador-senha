@@ -1,0 +1,29 @@
+@font-face {
+    font-family: gamelia;
+    src: url('../assets/font/gamelia.otf') format('truetype');
+}
+
+@font-face {
+    font-family: rubik-italic;
+    src: url('../assets/font/Rubik-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: rubik;
+    src: url('../assets/font/Rubik.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: familjen-grotesk;
+    src: url('../assets/font/FamiljenGrotesk.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: familjen-grotesk-italic;
+    src: url('../assets/font/FamiljenGrotesk-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: expletus-sans;
+    src: url('../assets/font/ExpletusSans.ttf') format('truetype');
+}

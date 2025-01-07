@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .logo {
+        max-width: 90%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .container-input {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+
+    .container-input span {
+        font-size: 18px;
+    }
+
+    .slider {
+        margin-top: 10px;
+    }
+
+    .button-cta {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .container-password {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .password {
+        font-size: 18px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .tooltip {
+        font-size: 14px;
+        top: 10px;
+        padding: 5px 7px;
+    }
+
+    .container-password:hover .tooltip {
+        bottom: 40px;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 15px 0;
+        top: 92%;
+    }
+}
